@@ -28,22 +28,10 @@ server.on("listening", function () {
 	 	address.address + ":" + address.port);
 });
 
-server.bind(80);
+server.bind(1337);
 
 
 
 setInterval(function() {
 	console.log(last);
 }, 5000)
-
-
-
-
-
-
-
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Server is offline...\n');
-}).listen(server_port, server_ip_address);
-console.log('Server running');
