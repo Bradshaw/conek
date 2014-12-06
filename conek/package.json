@@ -1,0 +1,11 @@
+{
+  "name": "conek",
+  "subdomain": "undefined-conek",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "version": "0.0.0-17",
+  "engines": {
+    "node": "0.10.x"
+  }
+}
