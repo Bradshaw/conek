@@ -20,9 +20,8 @@ server.on("message", function (msg, rinfo) {
 	console.log("thx for the "+msg);
 	var client = dgram.createSocket("udp4");
 	setInterval(function(){
-		client.send(message, 0, message.length, rinfo.port, rinfo.address, function(err, bytes) {
-		  client.close();
-		});
+		console.log("try send")
+		client.send(message, 0, message.length, rinfo.port, rinfo.address);
 	},1000);
 });
 
