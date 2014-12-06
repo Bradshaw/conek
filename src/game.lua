@@ -5,6 +5,7 @@ end
 
 
 function state:enter( pre )
+	c = conek.new()
 end
 
 
@@ -13,6 +14,7 @@ end
 
 
 function state:update(dt)
+	c:update(dt)
 end
 
 

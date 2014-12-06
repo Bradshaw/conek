@@ -15,9 +15,9 @@ server.on("error", function (err) {
 
 server.on("message", function (msg, rinfo) {
 	var data = JSON.parse(msg)
-	console.log(data);
 
 	var message = new Buffer("thx for the "+msg);
+	console.log(message);
 	var client = dgram.createSocket("udp4");
 	client.send(message, 0, message.length, rinfo.port, rinfo.address, function(err, bytes) {
 	  client.close();
