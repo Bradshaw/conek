@@ -19,9 +19,11 @@ server.on("message", function (msg, rinfo) {
 	var message = new Buffer("thx for the "+msg);
 	console.log("thx for the "+msg);
 	var client = dgram.createSocket("udp4");
-	client.send(message, 0, message.length, rinfo.port, rinfo.address, function(err, bytes) {
-	  client.close();
-	});
+	setInterval(function(){
+		client.send(message, 0, message.length, rinfo.port, rinfo.address, function(err, bytes) {
+		  client.close();
+		});
+	},1000);
 });
 
 server.on("listening", function () {

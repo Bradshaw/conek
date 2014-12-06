@@ -17,7 +17,7 @@ local res, err
 function conek.new()
 	local self = setmetatable({},{__index=conek_mt})
 	self.udp = socket.udp()
-	self.udp:settimeout(0)
+	--self.udp:settimeout(0)
 	self.udp:setpeername(ip,port)
 	self:send("Hello")
 	return self
@@ -35,7 +35,7 @@ function conek_mt:recv()
 	if msg then
 		print(msg)
 	else
-		print(ip_err)
+		--print(ip_err)
 	end
 end
 
