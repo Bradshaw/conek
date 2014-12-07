@@ -15,6 +15,22 @@ end
 
 function state:update(dt)
 	c:update(dt)
+	local xmove = 0
+	local ymove = 0
+	if love.keyboard.isDown("left") then
+		xmove = xmove-1
+	end
+	if love.keyboard.isDown("right") then
+		xmove = xmove+1
+	end
+	if love.keyboard.isDown("up") then
+		ymove = ymove-1
+	end
+	if love.keyboard.isDown("down") then
+		ymove = ymove+1
+	end
+	c:value("xmove",xmove)
+	c:value("ymove",ymove)
 end
 
 

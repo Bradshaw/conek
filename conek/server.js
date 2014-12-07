@@ -18,7 +18,7 @@ server.on("error", function (err) {
 server.on("message", function (msg, rinfo) {
 	var data = JSON.parse(msg)
 	console.log("yeah?")
-	var message = new Buffer("thx for the "+msg);
+	var message = new Buffer(msg);
 	console.log(rinfo.port, rinfo.address);
 	server.send(message, 0, message.length, rinfo.port, rinfo.address);
 
